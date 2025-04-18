@@ -11,9 +11,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
         
         body {
-            font-family: 'Syne Mono', monospace;
+            font-family: 'Comic Neue', cursive;
             background-color: #000;
             color: #fff;
             overflow-x: hidden;
@@ -40,7 +42,7 @@
         }
         
         .handwritten-text {
-            font-family: 'Caveat', cursive;
+            font-family: 'Permanent Marker', cursive;
             color: #fff;
             text-shadow: 
                 2px 2px 0 #ff00ff,
@@ -49,6 +51,23 @@
             position: relative;
             letter-spacing: 1px;
             transform: rotate(-2deg);
+        }
+        
+        .graffiti-text {
+            font-family: 'Permanent Marker', cursive;
+            color: #fff;
+            text-shadow: 
+                3px 3px 0 #ff00ff,
+                -3px -3px 0 #00ffff,
+                0 0 15px rgba(255,255,255,0.8);
+            position: relative;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            padding: 0 10px;
         }
         
         .glitch-text {
@@ -241,6 +260,10 @@
             50% { transform: translate(0, -20px) rotate(180deg); opacity: 0.8; }
             100% { transform: translate(0, 0) rotate(360deg); opacity: 0.1; }
         }
+        
+        .comic-text {
+            font-family: 'Comic Neue', cursive;
+        }
     </style>
 </head>
 <body class="quantum-bg">
@@ -302,8 +325,8 @@
         <div class="container mx-auto px-6 py-20">
             <div class="flex flex-col items-center justify-center min-h-screen">
                 <div class="text-center mb-16">
-                    <h1 class="handwritten-text text-6xl md:text-8xl font-bold mb-6">I DON'T SELL DRUGS</h1>
-                    <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    <h1 class="graffiti-text text-6xl md:text-8xl font-bold mb-6">I DON'T SELL DRUGS</h1>
+                    <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto comic-text">
                         I sell questions that might expand your mind beyond the conventional reality.
                         <br>
                         <span class="rainbow-text">85 quantum question cards to challenge your perception.</span>
@@ -312,7 +335,7 @@
                         <button onclick="showPage('cards')" class="neon-border px-8 py-4 bg-black text-white font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300 pulse">
                             EXPLORE THE CARDS
                         </button>
-                        <button class="neon-border px-8 py-4 bg-purple-900 text-white font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300">
+                        <button onclick="window.open('https://buy.stripe.com/dR6cOkbpIfQKf2oeUU', '_blank')" class="neon-border px-8 py-4 bg-purple-900 text-white font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300">
                             BUY NOW ($85)
                         </button>
                     </div>
@@ -321,22 +344,22 @@
                     <div class="quantum-card p-6 rounded-lg">
                         <div class="text-4xl mb-4 text-purple-400"><i class="fas fa-brain"></i></div>
                         <h3 class="text-xl font-bold mb-2">Mind Expansion</h3>
-                        <p class="text-gray-400">Questions that stretch your consciousness</p>
+                        <p class="text-gray-400 comic-text">Questions that stretch your consciousness</p>
                     </div>
                     <div class="quantum-card p-6 rounded-lg">
                         <div class="text-4xl mb-4 text-cyan-400"><i class="fas fa-atom"></i></div>
                         <h3 class="text-xl font-bold mb-2">Quantum Reality</h3>
-                        <p class="text-gray-400">Explore alternative dimensions of thought</p>
+                        <p class="text-gray-400 comic-text">Explore alternative dimensions of thought</p>
                     </div>
                     <div class="quantum-card p-6 rounded-lg">
                         <div class="text-4xl mb-4 text-yellow-400"><i class="fas fa-question"></i></div>
                         <h3 class="text-xl font-bold mb-2">85 Questions</h3>
-                        <p class="text-gray-400">Each one a portal to new understanding</p>
+                        <p class="text-gray-400 comic-text">Each one a portal to new understanding</p>
                     </div>
                     <div class="quantum-card p-6 rounded-lg">
                         <div class="text-4xl mb-4 text-pink-400"><i class="fas fa-eye"></i></div>
                         <h3 class="text-xl font-bold mb-2">Perception Shift</h3>
-                        <p class="text-gray-400">See reality through a different lens</p>
+                        <p class="text-gray-400 comic-text">See reality through a different lens</p>
                     </div>
                 </div>
             </div>
@@ -346,35 +369,35 @@
     <!-- Disclaimer Page -->
     <div id="disclaimer" class="page">
         <div class="container mx-auto px-6 py-20 max-w-4xl">
-            <h2 class="text-4xl md:text-6xl font-bold mb-12 text-center rainbow-text">DISCLAIMER</h2>
+            <h2 class="graffiti-text text-4xl md:text-6xl font-bold mb-12 text-center">DISCLAIMER</h2>
             
             <div class="quantum-card p-8 rounded-lg">
                 <div class="text-red-400 mb-6 text-4xl text-center"><i class="fas fa-exclamation-triangle"></i></div>
                 
                 <div id="disclaimer-en">
                     <h3 class="text-2xl font-bold mb-4 text-purple-300">LEGAL NOTICE</h3>
-                    <p class="text-gray-300 mb-6">
+                    <p class="text-gray-300 mb-6 comic-text">
                         Welcome to the escape room in your head, but know that once you're out, you may not wanna come back. This site and its products sometimes contain profanity, mention of drugs, suicide, cannibalism, and are imbued with an offensive attitude towards those who would take it that way, but the author doesn't encourage you to take any actions or make any inferences, the author's only goal is to make money with his critical thinking P.S. it's all not just sometimes present, it's the basis of all my works, all of them will be weird, psychedelic, surreal, abstract, unconventional and with a really deep meaning.
                     </p>
                 </div>
                 
                 <div id="disclaimer-sk" style="display: none;">
                     <h3 class="text-2xl font-bold mb-4 text-purple-300">PRÁVNE UPOZORNENIE</h3>
-                    <p class="text-gray-300 mb-6">
+                    <p class="text-gray-300 mb-6 comic-text">
                         Vitajte v únikovej miestnosti vo vašej hlave, ale vedzte, že keď z nej vyjdete, možno sa už nebudete chcieť vrátiť. Táto stránka a jej produkty niekedy obsahujú nadávky, zmienky o drogách, samovražde, kanibalizme a sú presiaknuté urážlivým postojom voči tým, ktorí to tak vnímajú, ale autor nikoho nenabáda k žiadnemu konaniu ani k žiadnym záverom, autorovým jediným cieľom je zarobiť peniaze svojím kritickým myslením P.S. nie je to všetko len niekedy prítomné, je to základ všetkých mojich prác, všetky budú divné, psychedelické, surrealistické, abstraktné, nekonvenčné a s naozaj hlbokým významom.
                     </p>
                 </div>
                 
                 <div id="disclaimer-uk" style="display: none;">
                     <h3 class="text-2xl font-bold mb-4 text-purple-300">ЮРИДИЧНЕ ПОПЕРЕДЖЕННЯ</h3>
-                    <p class="text-gray-300 mb-6">
+                    <p class="text-gray-300 mb-6 comic-text">
                         Вітаю у квест-кімнаті у вашій голові, але знайте, що, знайшовши вихід, ви, можливо, можете не захочете повертатися. На цьому сайті та в його продуктах інколи присутні мати, згадуються наркотики, тема самогубства, канібалізму, а також вони просякнуті образливим ставленням до тих, хто так це сприйме, але автор не спонукає нікого до будь-яких дій чи умовиводів, єдиною метою автора є заробіток грошей своїм критичним мисленням P.S. це все не просто інколи присутнє, а є основою всіх моїх робіт, усі вони будуть дивними, психоделічними, сюрреалістичними, абстрактними, нестандартними і з дійсно глибоким змістом.
                     </p>
                 </div>
                 
                 <div id="disclaimer-ru" style="display: none;">
                     <h3 class="text-2xl font-bold mb-4 text-purple-300">ЮРИДИЧЕСКОЕ ПРЕДУПРЕЖДЕНИЕ</h3>
-                    <p class="text-gray-300 mb-6">
+                    <p class="text-gray-300 mb-6 comic-text">
                         Добро пожаловать в квест-комнату в вашей голове, но знайте, что, выйдя, вы, возможно, не захотите возвращаться. На этом сайте и в его продуктах иногда присутствуют маты, упоминаются наркотики, тема самоубийства, каннибализма, а также они пропитаны оскорбительным отношением к тем, кто так это воспримет, но автор не побуждает никого к каким-либо действиям или умозаключениям, единственной целью автора является заработок денег своим критическим мышлением P.S. это все не просто иногда присутствует, а является основой всех моих работ, все они будут странными, психоделическими, сюрреалистическими, абстрактными, нестандартными и с действительно глубоким смыслом.
                     </p>
                 </div>
@@ -391,94 +414,94 @@
     <!-- Cards Page -->
     <div id="cards" class="page">
         <div class="container mx-auto px-6 py-20">
-            <h2 class="text-4xl md:text-6xl font-bold mb-12 text-center rainbow-text">THE QUANTUM CARDS</h2>
+            <h2 class="graffiti-text text-4xl md:text-6xl font-bold mb-12 text-center">THE QUANTUM CARDS</h2>
             
             <div class="max-w-4xl mx-auto mb-16">
                 <div class="quantum-card p-8 rounded-lg mb-8">
                     <div id="cards-en">
                         <h3 class="text-2xl font-bold mb-4 text-purple-300">Project essence</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             The point of marquest is that i have 85 rhetorical questions i made up and designed myself. You can buy any of them and answer (yes, make the impossible possible). This way you participate in the project and get a chance to win, which is guaranteed to be higher than the cost of participation (mine is obviously even higher). The project will be of interest to those who are really interested in the world around, inside and their existence in them (without bullshit). It's not a lottery where you fuck up 100€ and win 10, the probability of winning depends only on you. I'm launching marquest to make money and to gather an audience for my further projects (and my further money) (i'm mercantile but honest)
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-cyan-300">General conditions</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             The link to all 85 questions is below ("quest"), you can scroll through and find one or several (quantity isn't limited) you'd like to answer. Each of them costs 3 €. After payment you'll be taken to a google-form, where you need to specify your email / nickname in tg, nick in insta, question number and your answer (if you want, you can email or telegram me it). This info (not the answer) will be entered into a publicly available table (you won't see yourself there without payment), in which i'll also indicate the winner, who will receive 30% of the profit from question sales. That is, if 7 people participate, the total amount is 21 €, 6.3 € of which will be taken by the winner (the rest is mine), who i'll contact to transfer the money. So, the more people participate — the bigger the win. For now, the winner will be chosen from the moment when 7 answers gather. It'll be one so-called molecule, after the end of the competition in which, its table will go to the archive ("oil"). You can participate as many times as you want. If this topic appeals to you, maybe the molecules will be tied to time slots, and maybe i'll change the percentages or make second and third place for more winners, but for now, here goes
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-yellow-300">Answer conditions</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             The principle by which i'll choose the best answer is creativity. There is no one right answer to these questions, and i want you to think outside the box. Always draw parallels and look for references. The answer can be absolutely anything: you can actually answer, continue the philosophical-scientific discussion, write your impression or something from your life that will relate to the topic of the question. It doesn't matter how crazy your answer is, the main thing is to argue it logically and fuck me with your critical thinking
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-pink-300">One more paragraph</h3>
-                        <p class="text-gray-300">
+                        <p class="text-gray-300 comic-text">
                             Questions 17, 45, and 62 are sequels to 16, 44, and 61 respectively, so if you want any of them, i recommend taking the first part first. In addition to the table, the results of competitions will be posted in my insta stories, where i'll also compile the best answers, so you can subscribe to not miss the winnings, as well as to build an audience that is interested in similar topics for my next projects (i have ideas already).
                         </p>
                     </div>
                     
                     <div id="cards-sk" style="display: none;">
                         <h3 class="text-2xl font-bold mb-4 text-purple-300">Podstata projektu</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             Podstatou marquest je, že mám 85 rečníckych otázok, ktoré som sám vymyslel a navrhol. Môžete si kúpiť ktorúkoľvek z nich a odpovedať na ňu (áno, urobiť nemožné možným). Takto sa zúčastníte na projekte a získate šancu na výhru, ktorá bude zaručene vyššia ako náklady na účasť (moja, samozrejme, ešte vyššia). Projekt bude zaujímavý pre tých, ktorí sa naozaj zaujímajú o svet okolo, v sebe a o svoju existenciu v nich (bez kecov). Nie je to lotéria, v ktorej prejebete 100€ a vyhráte 10, pravdepodobnosť výhry závisí len od vás. Marquest organizujem preto, aby som zarobil peniaze a získal publikum pre svoje ďalšie projekty (a svoje ďalšie peniaze) (som merkantilistický, ale čestný)
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-cyan-300">Všeobecné podmienky</h3>
-                        <p class="text-gray-300 mb-4">
-                            Odkaz na všetkých 85 otázok nájdete nižšie („quest“), môžete si ich prezrieť a nájsť jednu alebo viacero (počet je neobmedzený), na ktoré by ste chceli odpovedať. Každá z nich stojí 3 €. Po zaplatení budete presmerovaní na google formulár, kde budete musieť zadať svoj email / nick v tg, nick v insta, číslo vybranej otázky a svoju odpoveď (ak chcete, môžete mi ju poslať mailom alebo telegramom). Tieto info (nie odpoveď) budú zapísané do verejnej tabuľky (bez platby sa tam neuvidíte), v ktorej uvediem aj výhercu, ktorý dostane 30% zo zisku z predaja otázok. To znamená, že ak sa zapojí 7 ľudí, celková suma je 21 €, z toho 6,3 € si vezme výherca (zvyšok je môj), ktorého budem kontaktovať, aby som previedol peniaze. Takže čím viac ľudí sa zúčastní, tým väčšia je výhra. Výherca bude zatiaľ vybraný od chvíle, keď sa zozbiera 7 odpovedí. Bude to jedna tzv. molekula, po skončení súťaže v ktorej, sa jej tabuľka dostane do archívu („ropa“). Môžete sa zúčastniť toľkokrát, koľkokrát chcete. Ak vás táto téma láka, možno budú molekuly viazané na časové intervaly a tiež možno zmením percentuálny pomer alebo urobím druhé a tretie miesto pre viac víťazov, ale zatiaľ je to takto
+                        <p class="text-gray-300 mb-4 comic-text">
+                            Odkaz na všetkých 85 otázok nájdete nižšie („quest“), môžete si ich prezrieť a nájsť jednu alebo viacero (počet je neobmedzený), na ktoré by ste chceli odpovedať. Každá z nich stojí 3 €. Po zaplatení budete presmerovaní na google formulár, kde budete musieť zadať svoj email / nick v tg, nick v insta, číslo vybranej otázky a svoju odpoveď (ak chcete, môžete mi ju poslať mailom aleto telegramom). Tieto info (nie odpoveď) budú zapísané do verejnej tabuľky (bez platby sa tam neuvidíte), v ktorej uvediem aj výhercu, ktorý dostane 30% zo zisku z predaja otázok. To znamená, že ak sa zapojí 7 ľudí, celková suma je 21 €, z toho 6,3 € si vezme výherca (zvyšok je môj), ktorého budem kontaktovať, aby som previedol peniaze. Takže čím viac ľudí sa zúčastní, tým väčšia je výhra. Výherca bude zatiaľ vybraný od chvíle, keď sa zozbiera 7 odpovedí. Bude to jedna tzv. molekula, po skončení súťaže v ktorej, sa jej tabuľka dostane do archívu („ropa“). Môžete sa zúčastniť toľkokrát, koľkokrát chcete. Ak vás táto téma láka, možno budú molekuly viazané na časové intervaly a tiež možno zmením percentuálny pomer alebo urobím druhé a tretie miesto pre viac víťazov, ale zatiaľ je to takto
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-yellow-300">Podmienky odpovede</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             Princípom, podľa ktorého vyberiem najlepšiu odpoveď, je kreativita. Na tieto otázky neexistuje jediná správna odpoveď a chcem, aby ste mysleli mimo rámca. Vždy hľadajte paralely a odkazy. Odpoveďou môže byť úplne čokoľvek: môžete skutočne odpovedať, môžete pokračovať vo filozoficko-vedeckej diskusii, napísať svoj dojem alebo niečo zo svojho života, čo bude súvisieť s témou otázky. Nezáleží na tom, aká šialená je vaša odpoveď, hlavné ju logicky vyargumentujte a jebnite ma so svojím kritickým myslením
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-pink-300">Ešte jeden odsek</h3>
-                        <p class="text-gray-300">
+                        <p class="text-gray-300 comic-text">
                             Otázky 17, 45 a 62 sú pokračovaním otázok 16, 44 a 61, takže ak chcete niektorú z nich, odporúčam najprv prejsť na prvú časť. Okrem tabuľky budem výsledky súťaží zverejňovať aj na insta príbehoch, kde budem tiež zhromažďovať vaše najlepšie odpovede, takže môžete mňa sledovať, aby ste nezmeškali výhru a zároveň aby ste si vytvorili publikum, ktoré má záujem o podobné témy pre moje ďalšie projekty (a nápady už mám).
                         </p>
                     </div>
                     
                     <div id="cards-uk" style="display: none;">
                         <h3 class="text-2xl font-bold mb-4 text-purple-300">Суть проєкту</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             Суть marquest полягає в тому, що у мене є 85 риторичних запитань, які я придумав і оформив сам. Ви можете купити будь-яке з них і відповісти (так, зробіть неможливе можливим). Таким чином ви берете участь у проєкті й отримуєте шанс на виграш, який гарантовано буде вищим, ніж вартість участі (у мене, ясна річ, ще вищим). Проєкт буде цікавий тим, кого справді цікавить світ навколо, всередині та своє існування в них (без хуйні). Це не лотерея, де ви пройобуєте 100€ і виграєте 10, вірогідність виграшу залежить лише від вас. Я запускаю marquest, щоб заробити гроші і зібрати аудиторію для моїх подальших проєктів (і моїх подальших грошей) (я меркантильний, але чесний)
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-cyan-300">Загальні умови</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             Посилання на всі 85 питань нижче ("квест"), ви можете погортати і знайти таке або такі (кількість необмежена), на які хотіли б відповісти. Кожне з них коштує 3 €. Після оплати вас перекине на гугл-форму, в якій треба буде вказати ваш e-mail / нік у тг, нік в інсті, номер запитання та вашу відповідь (якщо хочете, можете кидати мені її поштою чи в тг). Ця інфа (не відповідь) буде вносена в загальнодоступну таблицю (без опати ви себе там не побачите), в якій я також буду вказувати переможця, який отримає 30% прибутку від продажу запитань. Тобто, якщо участь беруть 7 осіб, то загальна сума — 21 €, 6.3 € з яких забирає переможець (решта моя), якого я контактуватиму для переказу грошей. Таким чином, чим більше людей беруть участь — тим більший виграш. Поки що переможець буде обраний з того моменту, коли збереться 7 відповідей. Це буде одна так звана молекула, після закінчення змагання в якій, її таблиця піде в архів ("нафта"). Ви можете брати участь скільки завгодно разів. Якщо ця тема вам зайде, то, можливо, молекули будуть прив'язані до часових інтервалів, а також, можливо, я зміню відсоткове співвідношення або зроблю друге і третє місце для більшої кількості переможців, але поки що так
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-yellow-300">Умови відповіді</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             Принцип, за яким я обиратиму найкращу відповідь — креативність. На ці запитання немає єдиної правильної відповіді, і я хочу, щоб ви увімкнули нестандартне мислення. Завжди проводьте паралелі та шукайте відсилання. Відповідь може бути абсолютно будь-якою: ви можете власне відповісти, можете продовжити філософсько-наукову дискусію, написати своє враження або щось зі свого життя, що стосуватиметься теми запитання. Не важливо наскільки божевільною буде ваша відповідь, головне логічно її аргументуйте і виїбіть мене своїм критичним мисленням
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-pink-300">Ще один абзац</h3>
-                        <p class="text-gray-300">
+                        <p class="text-gray-300 comic-text">
                             17, 45 і 62 запитання це продовження 16, 44 і 61 відповідно, тому якщо хочете якесь із них, то рекомендую брати спочатку першу частину. Крім таблиці, результати змагань я виставлятиму і в сторіс в інсті, де також буду робити підбірки найкращих відповідей, тому можете підписатися, щоб не пропустити виграш, а також для того, щоб сформувалася аудиторія, якій цікава така тематика для моїх наступних проєктів (а задумки у мене є).
                         </p>
                     </div>
                     
                     <div id="cards-ru" style="display: none;">
                         <h3 class="text-2xl font-bold mb-4 text-purple-300">Суть проекта</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             Суть marquest заключается в том, что у меня есть 85 риторических вопросов, которые я придумал и оформил сам. Вы можете купить любой из них и ответить (да, делайте невозможное возможным). Таким образом вы принимаете участие в проекте и получаете шанс на выигрыш, который гарантировано будет выше, чем стоимость участия (у меня, понятное дело, еще выше). Проект будет интересен тем, кого правда интересует мир вокруг, внутри и свое существование в них (без хуйни). Это не лотерея, где вы проебываете 100€ и выигрываете 10, вероятность выигрыша зависит исключительно от вас. Я запускаю marquest, чтобы заработать деньги и собрать аудиторию для моих дальнейших проектов (и моих дальнейших денег) (я меркантильный, но честный)
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-cyan-300">Общие условия</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             Ссылка на все 85 вопросов ниже ("квест"), вы можете полистать и найти такой или такие (количество не ограничено), на которые хотели бы ответить. Каждый из них стоит 3 €. После оплаты вас перекинет на гугл-форму, где нужно будет указать ваш e-mail / ник в тг, ник в инсте, номер выбранного вопроса и ваш ответ (если хотите, можете прислать мне его почтой или в тг). Эта инфа (не ответ) будет внесена в общедоступную таблицу (без оплаты вы себя там не увидите), в которой я также буду указывать победителя, который получит 30% прибыли с продаж вопросов. То есть, если участвуют 7 человек, то общая сумма — 21 €, 6.3 € из которых забирает победитель (остальное мое), которого я буду контактировать для перевода денег. Таким образом, чем больше людей участвуют — тем больше выигрыш. Пока что победитель будет выбираться с того момента, когда соберется 7 ответов. Это будет одна так называемая молекула, после окончания соревнования в которой, ее таблица пойдет в архив ("нефть"). Вы можете участвовать сколько угодно раз. Если эта тема вам зайдет, то, возможно, молекулы будут привязаны к временным интервалам, а также, возможно, я поменяю процентное соотношение или сделаю второе и третье место для большего числа победителей, но пока что так
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-yellow-300">Условия ответа</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p class="text-gray-300 mb-4 comic-text">
                             Принцип, по которому я буду выбирать лучший ответ — креативность. На эти вопросы нет единого правильного ответа, и я хочу, чтобы вы включили нестандартное мышление. Всегда проводите параллели и ищите отсылки. Ответ может быть абсолютно любым: вы можете собственно ответить, можете продолжить философско-научную дискусию, написать свое впечатление или что-то из своей жизни, что будет касаться темы вопроса. Не важно насколько сумасшедшим будет ваш ответ, главное логически его аргументируйте и выебите меня своим критическим мышлением
                         </p>
                         
                         <h3 class="text-2xl font-bold mb-4 text-pink-300">Еще один абзац</h3>
-                        <p class="text-gray-300">
+                        <p class="text-gray-300 comic-text">
                             17, 45 и 62 вопросы это продолжения 16, 44 и 61 соответственно, поэтому если хотите какой-то из них, то рекомендую брать сначала первую часть. Помимо таблицы, результаты соревнований я буду выставлять и в сторис в инсте, где также буду делать подборки лучших ответов, поэтому можете подписаться, чтобы не пропустить выигрыш, а также для того, чтобы сформировалась аудитория, которой интересна подобная тематика для моих следующих проектов (а задумки у меня есть)
                         </p>
                     </div>
@@ -489,27 +512,30 @@
                     <div class="quantum-card p-6 rounded-lg">
                         <div class="text-yellow-400 mb-3"><i class="fas fa-question-circle text-2xl"></i></div>
                         <h3 class="text-xl font-bold mb-2">Card #1</h3>
-                        <p class="text-gray-400">What if everything you remember is actually a false memory implanted yesterday?</p>
+                        <p class="text-gray-400 comic-text">What if everything you remember is actually a false memory implanted yesterday?</p>
                     </div>
                     <div class="quantum-card p-6 rounded-lg">
                         <div class="text-cyan-400 mb-3"><i class="fas fa-question-circle text-2xl"></i></div>
                         <h3 class="text-xl font-bold mb-2">Card #2</h3>
-                        <p class="text-gray-400">How would you prove that you're not currently dreaming?</p>
+                        <p class="text-gray-400 comic-text">How would you prove that you're not currently dreaming?</p>
                     </div>
                     <div class="quantum-card p-6 rounded-lg">
                         <div class="text-pink-400 mb-3"><i class="fas fa-question-circle text-2xl"></i></div>
                         <h3 class="text-xl font-bold mb-2">Card #3</h3>
-                        <p class="text-gray-400">If consciousness is fundamental, what does that say about the nature of reality?</p>
+                        <p class="text-gray-400 comic-text">If consciousness is fundamental, what does that say about the nature of reality?</p>
                     </div>
                     <div class="quantum-card p-6 rounded-lg">
                         <div class="text-purple-400 mb-3"><i class="fas fa-question-circle text-2xl"></i></div>
                         <h3 class="text-xl font-bold mb-2">Card #4</h3>
-                        <p class="text-gray-400">What if time is actually moving backwards and we just perceive it as moving forwards?</p>
+                        <p class="text-gray-400 comic-text">What if time is actually moving backwards and we just perceive it as moving forwards?</p>
                     </div>
                 </div>
                 
-                <div class="text-center mt-12">
-                    <button class="neon-border px-8 py-4 bg-black text-white font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300">
+                <div class="flex flex-col md:flex-row justify-center gap-6 mt-12">
+                    <button onclick="window.open('https://docs.google.com/spreadsheets/d/1zs2WD5sheyxlCN8yj4alpLIOo1NIIJ5YWX1-zYFgEgo/edit?gid=0#gid=0', '_blank')" class="neon-border px-8 py-4 bg-black text-white font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300">
+                        VIEW TABLE
+                    </button>
+                    <button onclick="window.open('https://buy.stripe.com/dR6cOkbpIfQKf2oeUU', '_blank')" class="neon-border px-8 py-4 bg-purple-900 text-white font-bold rounded-lg hover:bg-opacity-90 transition-all duration-300">
                         BUY FULL SET ($85)
                     </button>
                 </div>
@@ -520,7 +546,7 @@
     <!-- About Page -->
     <div id="about" class="page">
         <div class="container mx-auto px-6 py-20 max-w-4xl">
-            <h2 class="text-4xl md:text-6xl font-bold mb-12 text-center rainbow-text">ABOUT THE CREATOR</h2>
+            <h2 class="graffiti-text text-4xl md:text-6xl font-bold mb-12 text-center">photo mine</h2>
             
             <div class="flex flex-col md:flex-row gap-8 mb-12">
                 <div class="md:w-1/3">
@@ -535,23 +561,40 @@
                 </div>
                 <div class="md:w-2/3">
                     <div class="quantum-card p-8 rounded-lg">
-                        <h3 class="text-2xl font-bold mb-4 text-purple-300">WHO AM I?</h3>
-                        <p class="text-gray-300 mb-4">
-                            I'm a reality hacker, consciousness explorer, and professional question asker. For the past decade, I've been collecting and refining questions that challenge conventional thinking patterns.
-                        </p>
-                        <p class="text-gray-300 mb-4">
-                            My journey began during an intense period of questioning reality after a series of profound experiences. I realized that the right questions could be more powerful than any answers.
-                        </p>
-                        <p class="text-gray-300">
-                            These 85 cards represent my life's work in distilling the most mind-expanding questions I've encountered or created.
-                        </p>
+                        <div id="about-en">
+                            <h3 class="text-2xl font-bold mb-4 text-purple-300">WHO AM I?</h3>
+                            <p class="text-gray-300 mb-4 comic-text">
+                                First of all, i'm not a scammer or a drug dealer (until you take it that way) I don't think my passport information will tell you much about me (unless you're the president of my country, of course). Writing a summary of what i'm like is also fucked up, you'll understand me much better if i tell you what i'm not. I'm not a depressed teenager, a serious adult, or a professor who has fucked up his entire life on bullshit. I'm not a representative of any religion, don't see the difference between modern science and religion, don't identify myself with any social group, don't believe in astrology or government. I won't believe what i'm told until i strain my neurons and prove to myself that it's logical, and it doesn't matter who is saying it, a depressed teenager, a serious adult, or a professor who fucked up his whole life to tell me this. I don't think most people are reasonable and i'm not a hypocrite. I don't have tattoos, don't smoke, use alcohol or other substances you perceive as drugs. I'm not an extrovert, i don't go clubbing, play computer games or read books. I don't do all of these things not 'cos i'm jerking off to frames, but precisely 'cos i don't see the point in them (for myself). If you ask what i spend my time on, i have an identical question for you, and it's rhetorical. My perception of the world and mental health is very different from the right one. I'm an uncertainty, an imaginary unit, i'm a photo of me.
+                            </p>
+                        </div>
+                        
+                        <div id="about-sk" style="display: none;">
+                            <h3 class="text-2xl font-bold mb-4 text-purple-300">KTO SOM?</h3>
+                            <p class="text-gray-300 mb-4 comic-text">
+                                Po prvé, nie som podvodník ani drogový díler (kým to tak nevnímate) Nemyslím, že údaje z môjho pasu vám o mne veľa povedia (ak nie ste prezidentom mojej krajiny, samozrejme). Písať životopis o tom, aký som, je tiež blbosť, oveľa lepšie ma pochopíte, keď vám poviem, aký nie som. Nie som depresívny tínedžer, seriózny dospelý ani profesor, ktorý sa celý život venoval nezmyslom. Nevyznávam žiadne náboženstvo, nevidím žiadny rozdiel medzi modernou vedou a náboženstvom, nepatrím do žiadnej sociálnej skupiny, neverím v astrológiu ani vo vládu. Neuverím tomu, čo mi niekto povie, kým si nenamáham neuróny a nedokážem si, že je to logické, bez ohľadu na to, kto mi to povie, či depresívny tínedžer, seriózny dospelý alebo profesor, ktorý sa celý život venoval nezmyslom. Nemyslím si, že väčšina ľudí je múdra, a nie som pokrytec. Nemám tetovania, nefajčím, nepoužívam alkohol ani iné látky, ktoré vnímate ako drogy. Nie som extrovert, nechodím do klubov, nehrám počítačové hry ani nečítam knihy. Všetky tieto veci nerobím nie preto, že si vyhoním pri rámcoch, ale práve preto, že v nich (pre seba) nevidím zmysel. Ak sa ma pýtate, na čo trávim svoj čas, mám pre vás identickú otázku, a to rečnícku. Moje vnímanie sveta a duševného zdravia sa veľmi líši od toho, čo je potrebné. Som neistota, imaginárna jednotka, som foto mňa.
+                            </p>
+                        </div>
+                        
+                        <div id="about-uk" style="display: none;">
+                            <h3 class="text-2xl font-bold mb-4 text-purple-300">ХТО Я?</h3>
+                            <p class="text-gray-300 mb-4 comic-text">
+                                По-перше, я не скамер і не наркодилер (поки ви це так не сприйняли) Я не думаю, що мої паспортні дані багато розкажуть про мене (якщо ви, звісно, не президент моєї країни). Писати резюме про те, який я, це теж хуйня, ви зрозумієте мене набагато краще, якщо я скажу, ким я не являюсь. Я не депресивний підліток, не серйозний дорослий і не професор, який все життя проїбав на маячню. Я не сповідую жодної релігії, не бачу відмінностей між сучасною наукою і релігією, не відношу себе до жодної соціальної групи, не вірю в астрологію та уряд. Я не повірю в те, що мені кажуть, поки не напружу свої нейрони і не доведу собі, що це логічно, причому не важливо, хто це говорить, депресивний підліток, серйозний дорослий чи професор, який проїбав усе життя на те, щоб мені це сказати. Я не вважаю більшу частину людей розумними і не лицемірю. У мене немає тату, я не курю, не вживаю алкоголь чи інші речовини, які ви сприймаєте як наркотики. Я не екстраверт, не ходжу по клубах, не граю в комп'ютерні ігри і не читаю книжки. Я не роблю все це не тому що дрочу на рамки, а якраз тому що не бачу в них сенсу (для себе). Якщо ви запитаєте, на що ж я витрачаю свій час, то в мене до вас ідентичне запитання, і воно риторичне. Моє сприйняття світу і ментального здоров'я дуже відрізняється від потрібного. Я — невизначеність, уявна одиниця, я — фото мене.
+                            </p>
+                        </div>
+                        
+                        <div id="about-ru" style="display: none;">
+                            <h3 class="text-2xl font-bold mb-4 text-purple-300">КТО Я?</h3>
+                            <p class="text-gray-300 mb-4 comic-text">
+                                Во-первых, я не скамер и не наркодилер (пока вы это так не восприняли) Я не думаю, что мои паспортные данные много расскажут обо мне (если вы, конечно, не президент моей страны). Писать резюме о том, какой я, это тоже хуйня, вы поймете меня намного лучше если я скажу кем я не являюсь. Я не депрессивный подросток, не серьезный взрослый и не профессор, который всю жизнь проебал на бред. Я не исповедую никакую религию, не вижу отличий между современной наукой и религией, не отношу себя ни к какой социальной группе, не верю в астрологию и правительство. Я не поверю в то, что мне говорят, пока не напрягу свои нейроны и не докажу себе, что это логично, причем не важно, кто это говорит, депрессивный подросток, серьезный взрослый или профессор, который проебал всю жизнь на то, чтобы мне это сказать. Я не считаю бóльшую часть людей разумными и не лицемерю. У меня нет тату, я не курю, не употребляю алкоголь или другие вещества, которые вы воспринимаете как наркотики. Я не экстраверт, не хожу по клубам, не играю в компьютерные игры и не читаю книги. Я не делаю все это не потому что дрочу на рамки, а как раз потому что не вижу в них смысла (для себя). Если вы спросите, на что же я трачу свое время, то у меня к вам идентичный вопрос, и он риторический. Мое восприятие мира и ментального здоровья сильно отличается от нужного. Я — неопределенность, мнимая единица, я — фото меня.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="quantum-card p-8 rounded-lg mb-8">
                 <h3 class="text-2xl font-bold mb-4 text-cyan-300">MY PHILOSOPHY</h3>
-                <p class="text-gray-300">
+                <p class="text-gray-300 comic-text">
                     I believe that reality is far stranger than we can imagine, and that by asking the right questions, we can catch glimpses beyond the veil of ordinary perception. These cards are tools for that exploration.
                 </p>
             </div>
@@ -567,63 +610,54 @@
     <!-- Contact Page -->
     <div id="contact" class="page">
         <div class="container mx-auto px-6 py-20 max-w-4xl">
-            <h2 class="text-4xl md:text-6xl font-bold mb-12 text-center rainbow-text">CONTACT</h2>
+            <h2 class="graffiti-text text-4xl md:text-6xl font-bold mb-12 text-center">gluons</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div class="quantum-card p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-6 text-purple-300">GET IN TOUCH</h3>
-                    
-                    <div class="mb-6">
-                        <label class="block text-gray-400 mb-2">Your Name</label>
-                        <input type="text" class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-purple-500">
+                    <div id="contact-en">
+                        <h3 class="text-2xl font-bold mb-6 text-purple-300">GET IN TOUCH</h3>
+                        <p class="text-gray-300 mb-6 comic-text">If you have any questions, contact me:</p>
                     </div>
                     
-                    <div class="mb-6">
-                        <label class="block text-gray-400 mb-2">Your Email</label>
-                        <input type="email" class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-cyan-500">
+                    <div id="contact-sk" style="display: none;">
+                        <h3 class="text-2xl font-bold mb-6 text-purple-300">KONTAKT</h3>
+                        <p class="text-gray-300 mb-6 comic-text">Ak máte nejaké otázky, kontaktujte ma:</p>
                     </div>
                     
-                    <div class="mb-6">
-                        <label class="block text-gray-400 mb-2">Message</label>
-                        <textarea class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-pink-500" rows="4"></textarea>
+                    <div id="contact-uk" style="display: none;">
+                        <h3 class="text-2xl font-bold mb-6 text-purple-300">КОНТАКТИ</h3>
+                        <p class="text-gray-300 mb-6 comic-text">Якщо у вас є якісь питання, контактуйте мене:</p>
                     </div>
                     
-                    <button class="w-full py-3 bg-purple-900 text-white font-bold rounded-lg hover:bg-purple-800 transition">
-                        SEND MESSAGE
-                    </button>
+                    <div id="contact-ru" style="display: none;">
+                        <h3 class="text-2xl font-bold mb-6 text-purple-300">КОНТАКТЫ</h3>
+                        <p class="text-gray-300 mb-6 comic-text">если у вас есть какие-то вопросы, контактируйте меня:</p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-4">
+                        <a href="http://t.me/imphotomine" target="_blank" class="flex items-center px-4 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition">
+                            <div class="text-2xl text-blue-400 mr-4"><i class="fab fa-telegram"></i></div>
+                            <span class="comic-text">Telegram</span>
+                        </a>
+                        <a href="https://www.instagram.com/imphotomine?igsh=Mmo4bDcyNjh3bjJh" target="_blank" class="flex items-center px-4 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition">
+                            <div class="text-2xl text-pink-400 mr-4"><i class="fab fa-instagram"></i></div>
+                            <span class="comic-text">Instagram</span>
+                        </a>
+                        <a href="mailto:imphotomine@gmail.com" class="flex items-center px-4 py-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition">
+                            <div class="text-2xl text-yellow-400 mr-4"><i class="fas fa-envelope"></i></div>
+                            <span class="comic-text">Email</span>
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="quantum-card p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-6 text-cyan-300">OTHER WAYS TO CONNECT</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-300">CRYPTO PAYMENTS</h3>
+                    <p class="text-gray-300 mb-6 comic-text">For crypto payments, contact me via Telegram</p>
                     
-                    <div class="flex items-center mb-6">
-                        <div class="text-2xl text-pink-400 mr-4"><i class="fab fa-instagram"></i></div>
-                        <div>
-                            <p class="text-gray-400">@quantumcards</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-center mb-6">
-                        <div class="text-2xl text-blue-400 mr-4"><i class="fab fa-telegram"></i></div>
-                        <div>
-                            <p class="text-gray-400">t.me/quantumcards</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-center mb-6">
-                        <div class="text-2xl text-yellow-400 mr-4"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <p class="text-gray-400">contact@quantumcards.xyz</p>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <h4 class="text-xl font-bold mb-4 text-yellow-300">CRYPTO PAYMENTS ACCEPTED</h4>
-                        <div class="flex flex-wrap gap-4">
-                            <div class="text-3xl text-orange-500"><i class="fab fa-bitcoin"></i></div>
-                            <div class="text-3xl text-gray-400"><i class="fab fa-ethereum"></i></div>
-                            <div class="text-3xl text-purple-500"><i class="fas fa-coins"></i></div>
-                        </div>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="text-3xl text-orange-500"><i class="fab fa-bitcoin"></i></div>
+                        <div class="text-3xl text-gray-400"><i class="fab fa-ethereum"></i></div>
+                        <div class="text-3xl text-purple-500"><i class="fas fa-coins"></i></div>
                     </div>
                 </div>
             </div>
@@ -675,7 +709,7 @@
                 const opacity = Math.random() * 0.5 + 0.1;
                 
                 // Random color
-                const colors = ['#ff00ff', '#00ffff', '#ffff00', '#ff9900', '#00ff99'];
+                const colors = ['#ff00ff', #00ffff', '#ffff00', '#ff9900', '#00ff99'];
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 
                 // Apply styles
@@ -698,13 +732,15 @@
             document.getElementById('home').classList.add('active');
             
             // Hide all language versions
-            document.querySelectorAll('[id^="disclaimer-"], [id^="cards-"]').forEach(el => {
+            document.querySelectorAll('[id^="disclaimer-"], [id^="cards-"], [id^="about-"], [id^="contact-"]').forEach(el => {
                 el.style.display = 'none';
             });
             
             // Show selected language version
             document.getElementById(`disclaimer-${lang}`).style.display = 'block';
             document.getElementById(`cards-${lang}`).style.display = 'block';
+            document.getElementById(`about-${lang}`).style.display = 'block';
+            document.getElementById(`contact-${lang}`).style.display = 'block';
         }
         
         // Initialize
